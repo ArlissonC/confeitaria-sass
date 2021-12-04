@@ -1,0 +1,69 @@
+// Cores
+$cor-primaria: #ffd6e8;
+$cor-secundaria: #f7ff98;
+$cor-terciaria: #8febff;
+$cor-textos: #252525;
+$cor-branca: #fff;
+
+// Tipografia
+@mixin tipo-1($tamanho) {
+  @if $tamanho == 16 {
+    font-size: 1em;
+    color: $cor-textos;
+  } @else if $tamanho == 32 {
+    font-size: 2em;
+    color: $cor-textos;
+    font-weight: bold;
+  } @else if $tamanho == 42 {
+    font-size: 2.625em;
+    color: $cor-textos;
+    font-weight: bold;
+  } @else if $tamanho == 72 {
+    font-size: 4.5em;
+    color: $cor-textos;
+    font-weight: bold;
+  } @else if $tamanho == 120 {
+    font-size: 7.5em;
+    color: $cor-textos;
+    font-weight: bold;
+  }
+}
+
+@mixin tipo-2($tamanho) {
+  font-family: "Nunito", sans-serif;
+  @if $tamanho == 16 {
+    font-size: 1em;
+    color: $cor-textos;
+  } @else if $tamanho == 20 {
+    font-size: 1.25em;
+    color: $cor-textos;
+    font-weight: bold;
+  }
+}
+
+// Container
+@mixin container {
+  padding: 0 20px;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+@mixin flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+// Responsividade
+@mixin d($dispositivo) {
+  @if $dispositivo == tablet {
+    @media only screen and (min-width: 768px) and (max-width: 959px) {
+      @content;
+    }
+  } @else if $dispositivo == mobile {
+    @media only screen and (max-width: 767px) {
+      @content;
+    }
+  }
+}
