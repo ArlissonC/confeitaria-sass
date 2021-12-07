@@ -1,0 +1,70 @@
+.contato {
+  margin-bottom: 120px;
+  h2 {
+    @include tipo-1(42);
+    text-align: center;
+    margin-bottom: 80px;
+  }
+  form {
+    @include flex;
+    max-width: 100%;
+    width: 480px;
+    flex-direction: column;
+    align-items: flex-start;
+    label {
+      @include tipo-2(20);
+      margin-bottom: 5px;
+      &::before {
+        content: url("../img/form-cake.svg");
+        width: 19px;
+        height: 21px;
+        margin-right: 10px;
+      }
+    }
+    input {
+      @include tipo-1(16);
+      background: $cor-terciaria;
+      width: 100%;
+      height: 40px;
+      padding: 20px 20px;
+      margin-bottom: 25px;
+      outline: none;
+      border: none;
+      border-radius: 10px;
+    }
+    textarea {
+      font-size: 1.25em;
+      color: $cor-textos;
+      background: $cor-terciaria;
+      width: 100%;
+      padding: 20px 20px;
+      resize: none;
+      outline: none;
+      border: none;
+      border-radius: 10px;
+    }
+    button {
+      margin-top: 25px;
+      padding: 10px 60px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background: $cor-terciaria;
+      @include tipo-2(20);
+    }
+  }
+}
+
+.box-form {
+  @include flex;
+}
+
+.img-contato img {
+  width: 450px;
+  @include d(tablet) {
+    width: 200px;
+  }
+  @include d(mobile) {
+    display: none;
+  }
+}

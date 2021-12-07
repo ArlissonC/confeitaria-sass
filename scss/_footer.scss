@@ -1,0 +1,34 @@
+.footer {
+  width: 100%;
+  height: 100px;
+  background: $cor-primaria;
+  @include d(mobile) {
+    height: auto;
+  }
+}
+
+.base-footer {
+  @include flex;
+  padding-top: 30px;
+  p {
+    @include tipo-1(16);
+    line-height: 2;
+    a {
+      text-decoration: none;
+      color: $cor-textos;
+      font-weight: bold;
+    }
+  }
+}
+
+.redes-sociais {
+  @include d(mobile) {
+    margin: 20px 0;
+  }
+  a {
+    padding: 10px;
+  }
+  img {
+    width: 40px;
+  }
+}

@@ -1,0 +1,71 @@
+.introducao {
+  @include flex;
+  margin-bottom: 270px;
+  @include d(tablet) {
+    margin-bottom: 180px;
+  }
+  @include d(mobile) {
+    margin-bottom: 120px;
+  }
+}
+
+.bg-rosa {
+  background: url(../img/bg-rosa.svg) no-repeat center;
+  width: 1090px;
+  height: 686px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.textos-intro {
+  h1 {
+    @include tipo-1(120);
+    @include d(mobile) {
+      @include tipo-1(72);
+    }
+  }
+  p {
+    @include tipo-1(16);
+  }
+  button {
+    margin-top: 25px;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: $cor-primaria;
+    @include tipo-1(16);
+    @include d(tablet) {
+      border: 2px solid $cor-branca;
+    }
+    @include d(mobile) {
+      border: 2px solid $cor-branca;
+    }
+  }
+}
+
+.img-intro {
+  width: 500px;
+  position: relative;
+  @include d(tablet) {
+    margin-top: 50px;
+  }
+  @include d(mobile) {
+    margin-top: 50px;
+    width: 300px;
+  }
+  .retrato {
+    border: 20px solid $cor-branca;
+    width: 460px;
+    height: 365px;
+    position: absolute;
+    top: -25px;
+    right: 25px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.2));
+    @include d(mobile) {
+      display: none;
+    }
+  }
+}

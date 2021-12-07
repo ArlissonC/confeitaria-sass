@@ -1,0 +1,65 @@
+.produtos {
+  margin-bottom: 160px;
+  h2 {
+    @include tipo-1(42);
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .descricao-produtos {
+    @include tipo-1(16);
+    text-align: center;
+    margin-bottom: 100px;
+  }
+}
+
+.boxs-produtos {
+  @include flex;
+  @include d(tablet) {
+    justify-content: center;
+  }
+  @include d(mobile) {
+    justify-content: center;
+  }
+}
+
+.box {
+  width: 270px;
+  height: 296px;
+  padding: 125px 20px;
+  border-radius: 50px;
+  text-align: center;
+  margin-bottom: 60px;
+  cursor: pointer;
+  @include d(tablet) {
+    margin: 20px;
+  }
+  p {
+    @include tipo-1(32);
+    color: $cor-branca;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.todos {
+  background: $cor-primaria url("../img/bolo-1.png") no-repeat center;
+}
+
+.casamento {
+  background: $cor-secundaria url("../img/bolo-2.png") no-repeat center;
+}
+
+.homens {
+  background: $cor-terciaria url("../img/bolo-3.png") no-repeat center;
+}
+
+.criancas {
+  background: $cor-terciaria url("../img/bolo-4.png") no-repeat center;
+}
+
+.mulheres {
+  background: $cor-primaria url("../img/bolo-5.png") no-repeat center -15px;
+}
+
+.sobremesas {
+  background: $cor-secundaria url("../img/bolo-6.png") no-repeat center;
+}
