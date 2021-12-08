@@ -1,0 +1,24 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+}
+img {
+  max-width: 100%;
+}
+
+.container {
+  @include container;
+  @include d(tablet) {
+    max-width: 768px;
+  }
+  @include d(mobile) {
+    max-width: 340px;
+  }
+}

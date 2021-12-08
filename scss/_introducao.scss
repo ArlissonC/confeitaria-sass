@@ -1,3 +1,18 @@
+.header {
+  width: 100%;
+  padding: 40px 0;
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    li a {
+      padding: 10px 20px;
+      text-decoration: none;
+      @include tipo-2(16);
+    }
+  }
+}
+
 .introducao {
   @include flex;
   margin-bottom: 270px;
